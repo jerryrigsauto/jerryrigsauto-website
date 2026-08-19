@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1215" data-theme-color>
+  <script>
+    (() => {
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem('jerry-rigs-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
+  <meta name="description" content="Shop Jerry-Rigs merch and future automotive products.">
+  <title>Shop | Jerry-Rigs</title>
+  <link rel="icon" href="assets/jerry-rigs-logo-dark.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="shop.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="site-shell">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img
+          data-theme-logo
+          data-dark-src="assets/jerry-rigs-logo-dark.png"
+          data-light-src="assets/jerry-rigs-logo-light.png"
+          src="assets/jerry-rigs-logo-dark.png"
+          alt="Jerry-Rigs logo">
+        <div class="brand-copy"><div class="brand-name">Jerry-Rigs</div><div class="brand-tagline">Automotive Tuning • Projects • Engineering</div></div>
+      </a>
+      <button class="menu-btn" data-menu-button aria-expanded="false" aria-label="Open navigation">Menu</button>
+      <nav class="nav-links" data-nav-links>
+        <a data-nav-link href="index.html">Home</a>
+        <a data-nav-link href="shop.html">Shop</a>
+        <a data-nav-link href="projects.html">Projects</a>
+        <a data-nav-link href="about.html">About</a>
+        <a data-nav-link class="nav-cta" href="appointments.html">Appointments</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <div class="eyebrow">Jerry-Rigs Shop</div>
+        <h1>Merch & Products</h1>
+        <p>A storefront for Jerry-Rigs merch, branded gear, CAD-designed parts, and future automotive products.</p>
+        <div class="accent-line"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="notice">The products below are starter placeholders. Replace the names, pricing, photos, inventory status, and purchase links when real products are ready.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Products</h2>
+          <div class="accent-line"></div>
+        </div>
+
+        <div class="shop-grid">
+          <article class="product-card">
+            <div class="product-media"><img data-theme-logo data-dark-src="assets/jerry-rigs-logo-dark.png" data-light-src="assets/jerry-rigs-logo-light.png" src="assets/jerry-rigs-logo-dark.png" alt="Jerry-Rigs shirt placeholder"></div>
+            <div class="product-body">
+              <div class="product-category">Merch</div>
+              <h3>Jerry-Rigs Logo Tee</h3>
+              <p>A clean branded shirt concept for meets, track days, the shop, and everyday wear.</p>
+              <div class="product-foot"><span class="product-price">Price TBD</span><span class="badge">Coming Soon</span></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media"><img data-theme-logo data-dark-src="assets/jerry-rigs-logo-dark.png" data-light-src="assets/jerry-rigs-logo-light.png" src="assets/jerry-rigs-logo-dark.png" alt="Jerry-Rigs decal placeholder"></div>
+            <div class="product-body">
+              <div class="product-category">Merch</div>
+              <h3>Jerry-Rigs Decal Pack</h3>
+              <p>Logo decals for vehicle windows, toolboxes, laptops, trailers, and garage storage.</p>
+              <div class="product-foot"><span class="product-price">Price TBD</span><span class="badge">Coming Soon</span></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media"><img data-theme-logo data-dark-src="assets/jerry-rigs-logo-dark.png" data-light-src="assets/jerry-rigs-logo-light.png" src="assets/jerry-rigs-logo-dark.png" alt="Jerry-Rigs banner placeholder"></div>
+            <div class="product-body">
+              <div class="product-category">Garage</div>
+              <h3>Jerry-Rigs Garage Banner</h3>
+              <p>A large-format wall banner using the orange, charcoal, and wrench branding.</p>
+              <div class="product-foot"><span class="product-price">Price TBD</span><span class="badge">Coming Soon</span></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media"><img data-theme-logo data-dark-src="assets/jerry-rigs-logo-dark.png" data-light-src="assets/jerry-rigs-logo-light.png" src="assets/jerry-rigs-logo-dark.png" alt="CAD component placeholder"></div>
+            <div class="product-body">
+              <div class="product-category">Automotive</div>
+              <h3>CAD-Designed Components</h3>
+              <p>Future product space for brackets, mounts, adapters, and other vehicle-specific parts.</p>
+              <div class="product-foot"><span class="product-price">Future Release</span><span class="badge">In Development</span></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media"><img data-theme-logo data-dark-src="assets/jerry-rigs-logo-dark.png" data-light-src="assets/jerry-rigs-logo-light.png" src="assets/jerry-rigs-logo-dark.png" alt="Automotive hardware kit placeholder"></div>
+            <div class="product-body">
+              <div class="product-category">Automotive</div>
+              <h3>Project Hardware Kits</h3>
+              <p>Organized hardware packs designed around repeatable project installs and conversions.</p>
+              <div class="product-foot"><span class="product-price">Future Release</span><span class="badge">Planned</span></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media"><img data-theme-logo data-dark-src="assets/jerry-rigs-logo-dark.png" data-light-src="assets/jerry-rigs-logo-light.png" src="assets/jerry-rigs-logo-dark.png" alt="Future Jerry-Rigs product placeholder"></div>
+            <div class="product-body">
+              <div class="product-category">Jerry-Rigs</div>
+              <h3>Next Product</h3>
+              <p>Use this card for the first real product you are ready to sell through the website.</p>
+              <div class="product-foot"><span class="product-price">Your Price</span><span class="badge">Add Inventory</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-identity">
+          <img
+            class="footer-logo"
+            data-theme-logo
+            data-dark-src="assets/jerry-rigs-logo-dark.png"
+            data-light-src="assets/jerry-rigs-logo-light.png"
+            src="assets/jerry-rigs-logo-dark.png"
+            alt="Jerry-Rigs logo">
+          <div>
+            <div class="footer-brand">Jerry-Rigs</div>
+            <div class="footer-tagline">Quality Work • Clear Data • Honest Service</div>
+          </div>
+        </div>
+
+        <div class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+        </div>
+
+        <div class="footer-theme">
+          <div class="theme-control-title">Appearance</div>
+          <label class="theme-switch">
+            <input type="checkbox" data-theme-toggle aria-label="Switch to light mode">
+            <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+            <span class="theme-mode" data-theme-label>Dark mode</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Jerry-Rigs. All rights reserved.</span>
+        <span>Automotive Tuning • Projects • Engineering</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

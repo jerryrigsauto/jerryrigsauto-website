@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1215" data-theme-color>
+  <script>
+    (() => {
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem('jerry-rigs-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
+  <meta name="description" content="Request an automotive appointment with Jerry-Rigs.">
+  <title>Appointments | Jerry-Rigs</title>
+  <link rel="icon" href="assets/jerry-rigs-logo-dark.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="appointments.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="site-shell">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img
+          data-theme-logo
+          data-dark-src="assets/jerry-rigs-logo-dark.png"
+          data-light-src="assets/jerry-rigs-logo-light.png"
+          src="assets/jerry-rigs-logo-dark.png"
+          alt="Jerry-Rigs logo">
+        <div class="brand-copy"><div class="brand-name">Jerry-Rigs</div><div class="brand-tagline">Automotive Tuning • Projects • Engineering</div></div>
+      </a>
+      <button class="menu-btn" data-menu-button aria-expanded="false" aria-label="Open navigation">Menu</button>
+      <nav class="nav-links" data-nav-links>
+        <a data-nav-link href="index.html">Home</a>
+        <a data-nav-link href="shop.html">Shop</a>
+        <a data-nav-link href="projects.html">Projects</a>
+        <a data-nav-link href="about.html">About</a>
+        <a data-nav-link class="nav-cta" href="appointments.html">Appointments</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <div class="eyebrow">Appointment Request</div>
+        <h1>Request an Appointment</h1>
+        <p>Tell me what the vehicle needs, what has already been done, and what you want to accomplish. Appointment requests are reviewed before a time is confirmed.</p>
+        <div class="accent-line"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container appointment-layout">
+        <form class="form-card" id="appointment-form">
+          <div class="section-heading">
+            <h2>Vehicle & Contact Information</h2>
+            <div class="accent-line"></div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field full"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="vehicle">Vehicle</label><input id="vehicle" name="vehicle" placeholder="Year, make, model" required></div>
+            <div class="field"><label for="engine">Engine & Transmission</label><input id="engine" name="engine" placeholder="Example: 2.4L I4, 6-speed manual"></div>
+            <fieldset class="field full service-fieldset">
+              <legend>Services Needed <span class="required-note">Select all that apply</span></legend>
+              <div class="service-grid" id="service-options">
+                <label class="service-option">
+                  <input type="checkbox" name="services[]" value="Diagnostics">
+                  <span><strong>Diagnostics</strong><small>Identify drivability, mechanical, electrical, or calibration-related issues.</small></span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="services[]" value="Tuning consultation">
+                  <span><strong>Tuning Consultation</strong><small>Review goals, current setup, calibration needs, and next steps.</small></span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="services[]" value="Data log review">
+                  <span><strong>Data Log Review</strong><small>Review scan data, DTCs, fuel trims, knock, wideband data, or existing logs.</small></span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="services[]" value="Modification planning">
+                  <span><strong>Modification Planning</strong><small>Plan supporting modifications and the order they should be completed.</small></span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="services[]" value="Project consultation">
+                  <span><strong>Project Consultation</strong><small>Discuss a larger build, swap, custom project, or development plan.</small></span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="services[]" value="Other">
+                  <span><strong>Other</strong><small>Use the problem or goal field below to explain what you need.</small></span>
+                </label>
+              </div>
+              <div class="field-error" id="service-error" aria-live="polite"></div>
+            </fieldset>
+
+            <div class="field">
+              <label for="date">Preferred Date</label>
+              <input id="date" name="date" type="date" required>
+              <small class="field-help">This is a preferred date, not a confirmed appointment.</small>
+            </div>
+
+            <div class="field">
+              <label for="timeframe">Requested Timeframe</label>
+              <select id="timeframe" name="timeframe" required>
+                <option value="">Choose one</option>
+                <option>As soon as possible</option>
+                <option>Within 1–2 weeks</option>
+                <option>Within 1 month</option>
+                <option>Flexible / no rush</option>
+              </select>
+            </div>
+            <div class="field full"><label for="mods">Current Modifications</label><textarea id="mods" name="mods" placeholder="List engine, intake, exhaust, fuel system, forced induction, transmission, or other relevant changes."></textarea></div>
+            <div class="field full"><label for="goal">Problem or Goal</label><textarea id="goal" name="goal" placeholder="Describe what the vehicle is doing now and what you want to accomplish." required></textarea></div>
+          </div>
+
+          <div class="request-notice">
+            <strong>Appointment requests are reviewed by priority.</strong>
+            <p>Submitting this form does not reserve a time. Requests are evaluated based on scope, urgency, current workload, project fit, and the time required. A request may be accepted, scheduled for a later date, or declined if it is not a good fit for the current schedule.</p>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Submit Appointment Request</button>
+            <button class="btn btn-secondary" type="reset">Clear Form</button>
+          </div>
+          <p class="form-note">This demo form is not connected to an email service or booking backend yet.</p>
+          <div id="form-status" class="status" role="status" aria-live="polite"></div>
+        </form>
+
+        <aside class="appointment-info">
+          <h2>Before Scheduling</h2>
+          <div class="accent-line"></div>
+          <div class="info-list">
+            <div class="info-row"><strong>Know the current setup</strong><span>Bring a complete list of modifications, fuel type, current tune, and anything recently changed.</span></div>
+            <div class="info-row"><strong>Describe symptoms clearly</strong><span>When does the issue happen? RPM, speed, gear, load, temperature, and warning lights all help.</span></div>
+            <div class="info-row"><strong>Mechanical condition matters</strong><span>A tune should not be used to hide mechanical faults. Problems need to be diagnosed before calibration work is treated as the fix.</span></div>
+            <div class="info-row"><strong>Data is useful</strong><span>Existing scan logs, DTCs, wideband data, and previous calibration files can shorten the diagnostic process.</span></div>
+            <div class="info-row priority-row"><strong>Requests are priority reviewed</strong><span>Submitting a request does not guarantee acceptance or a specific date. Higher-priority work and projects that are a better fit for the current schedule may be handled first.</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-identity">
+          <img
+            class="footer-logo"
+            data-theme-logo
+            data-dark-src="assets/jerry-rigs-logo-dark.png"
+            data-light-src="assets/jerry-rigs-logo-light.png"
+            src="assets/jerry-rigs-logo-dark.png"
+            alt="Jerry-Rigs logo">
+          <div>
+            <div class="footer-brand">Jerry-Rigs</div>
+            <div class="footer-tagline">Quality Work • Clear Data • Honest Service</div>
+          </div>
+        </div>
+
+        <div class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+        </div>
+
+        <div class="footer-theme">
+          <div class="theme-control-title">Appearance</div>
+          <label class="theme-switch">
+            <input type="checkbox" data-theme-toggle aria-label="Switch to light mode">
+            <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+            <span class="theme-mode" data-theme-label>Dark mode</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Jerry-Rigs. All rights reserved.</span>
+        <span>Automotive Tuning • Projects • Engineering</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

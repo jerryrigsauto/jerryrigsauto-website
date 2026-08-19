@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1215" data-theme-color>
+  <script>
+    (() => {
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem('jerry-rigs-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
+  <meta name="description" content="Jerry-Rigs automotive tuning, projects, products, and performance development.">
+  <title>Jerry-Rigs | Automotive Tuning & Projects</title>
+  <link rel="icon" href="assets/jerry-rigs-logo-dark.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="site-shell">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Jerry-Rigs home">
+        <img
+          data-theme-logo
+          data-dark-src="assets/jerry-rigs-logo-dark.png"
+          data-light-src="assets/jerry-rigs-logo-light.png"
+          src="assets/jerry-rigs-logo-dark.png"
+          alt="Jerry-Rigs logo">
+        <div class="brand-copy">
+          <div class="brand-name">Jerry-Rigs</div>
+          <div class="brand-tagline">Automotive Tuning • Projects • Engineering</div>
+        </div>
+      </a>
+      <button class="menu-btn" data-menu-button aria-expanded="false" aria-label="Open navigation">Menu</button>
+      <nav class="nav-links" data-nav-links aria-label="Primary navigation">
+        <a data-nav-link href="index.html">Home</a>
+        <a data-nav-link href="shop.html">Shop</a>
+        <a data-nav-link href="projects.html">Projects</a>
+        <a data-nav-link href="about.html">About</a>
+        <a data-nav-link class="nav-cta" href="appointments.html">Appointments</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="home-hero">
+      <div class="container home-hero-grid">
+        <div>
+          <div class="eyebrow">Jerry-Rigs Automotive</div>
+          <h1>Built to understand.<br><span>Tuned to perform.</span></h1>
+          <div class="accent-line"></div>
+          <p>Jerry-Rigs is focused on practical automotive engineering, calibration, diagnostics, and project development. The goal is simple: understand what the vehicle is doing, make changes for a reason, and verify the result with real data.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="appointments.html">Request an Appointment</a>
+            <a class="btn btn-secondary" href="projects.html">View Projects</a>
+          </div>
+        </div>
+        <div class="hero-logo-card">
+          <img data-theme-logo data-dark-src="assets/jerry-rigs-logo-dark.png" data-light-src="assets/jerry-rigs-logo-light.png" src="assets/jerry-rigs-logo-dark.png" alt="Jerry-Rigs wrench logo">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Start Here</h2>
+          <div class="accent-line"></div>
+          <p>Choose where you want to go next. Book time, browse products, or learn what Jerry-Rigs is building toward.</p>
+        </div>
+
+        <div class="home-cards">
+          <article class="card">
+            <div class="card-number"></div>
+            <h3>Appointment Scheduling</h3>
+            <p>Request diagnostics, tuning help, modification planning, or project consultation. Requests are reviewed before a time is confirmed.</p>
+            <a class="mini-link" href="appointments.html">Request an appointment →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-number"></div>
+            <h3>Visit the Shop</h3>
+            <p>Browse Jerry-Rigs merch, branded items, and future automotive products as they become available.</p>
+            <a class="mini-link" href="shop.html">Open the shop →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-number"></div>
+            <h3>About Jerry-Rigs</h3>
+            <p>Learn why the business exists, what automotive tuning actually changes, and why data matters.</p>
+            <a class="mini-link" href="about.html">Read about Jerry-Rigs →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="feature-band">
+          <div>
+            <h2>See the work behind the name.</h2>
+            <p>The Projects page is built to document modifications, calibration changes, testing, problems solved, and what was learned instead of showing only a finished parts list.</p>
+          </div>
+          <a class="btn btn-primary" href="projects.html">Explore Projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-identity">
+          <img
+            class="footer-logo"
+            data-theme-logo
+            data-dark-src="assets/jerry-rigs-logo-dark.png"
+            data-light-src="assets/jerry-rigs-logo-light.png"
+            src="assets/jerry-rigs-logo-dark.png"
+            alt="Jerry-Rigs logo">
+          <div>
+            <div class="footer-brand">Jerry-Rigs</div>
+            <div class="footer-tagline">Quality Work • Clear Data • Honest Service</div>
+          </div>
+        </div>
+
+        <div class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+        </div>
+
+        <div class="footer-theme">
+          <div class="theme-control-title">Appearance</div>
+          <label class="theme-switch">
+            <input type="checkbox" data-theme-toggle aria-label="Switch to light mode">
+            <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+            <span class="theme-mode" data-theme-label>Dark mode</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Jerry-Rigs. All rights reserved.</span>
+        <span>Automotive Tuning • Projects • Engineering</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

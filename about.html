@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1215" data-theme-color>
+  <script>
+    (() => {
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem('jerry-rigs-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
+  <meta name="description" content="About Jerry-Rigs and an explanation of automotive tuning and calibration.">
+  <title>About | Jerry-Rigs</title>
+  <link rel="icon" href="assets/jerry-rigs-logo-dark.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="about.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="site-shell">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img
+          data-theme-logo
+          data-dark-src="assets/jerry-rigs-logo-dark.png"
+          data-light-src="assets/jerry-rigs-logo-light.png"
+          src="assets/jerry-rigs-logo-dark.png"
+          alt="Jerry-Rigs logo">
+        <div class="brand-copy"><div class="brand-name">Jerry-Rigs</div><div class="brand-tagline">Automotive Tuning • Projects • Engineering</div></div>
+      </a>
+      <button class="menu-btn" data-menu-button aria-expanded="false" aria-label="Open navigation">Menu</button>
+      <nav class="nav-links" data-nav-links>
+        <a data-nav-link href="index.html">Home</a>
+        <a data-nav-link href="shop.html">Shop</a>
+        <a data-nav-link href="projects.html">Projects</a>
+        <a data-nav-link href="about.html">About</a>
+        <a data-nav-link class="nav-cta" href="appointments.html">Appointments</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <div class="eyebrow">About Jerry-Rigs</div>
+        <h1>Engineering First. Parts Second.</h1>
+        <p>Jerry-Rigs is built around understanding how a vehicle works, solving the problem in front of it, and verifying changes instead of relying on guesswork.</p>
+        <div class="accent-line"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-grid">
+        <article class="about-card">
+          <h2>Why Jerry-Rigs Exists</h2>
+          <div class="accent-line"></div>
+          <p>Jerry-Rigs started from hands-on automotive projects and the need to solve problems that do not always have an off-the-shelf answer. A bracket may need to be redesigned. A calibration may need to be corrected. A modification may need to be tested instead of assumed to work.</p>
+          <p>The long-term direction is an automotive business built around engineering, performance development, diagnostics, tuning, and custom solutions. The goal is not to bolt on the most parts. The goal is to understand what the car needs, make the change for a reason, and verify the result.</p>
+          <p>As Jerry-Rigs grows, this site can become a portfolio of project cars, customer work, products, technical case studies, and documented results.</p>
+        </article>
+
+        <article class="about-card">
+          <h2>What Automotive Tuning Is</h2>
+          <div class="accent-line"></div>
+          <p>Modern engine and transmission controllers use calibration tables and control strategies to decide how the vehicle responds. Tuning changes selected calibration values so the controller better matches the engine, fuel, airflow, drivetrain, and intended use.</p>
+          <p>Depending on the vehicle, calibration work can involve fuel delivery, ignition timing, airflow modeling, torque management, throttle behavior, idle control, shift behavior, boost control, rev limits, fan operation, and other strategies.</p>
+          <p>A good tune is not simply a file that makes more power. It is a controlled process of measuring the vehicle, changing the correct areas, reviewing data, and validating that the result is safe and consistent.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-grid">
+        <article class="about-card">
+          <h2>Why Tune a Vehicle</h2>
+          <div class="accent-line"></div>
+          <ul>
+            <li>Correct calibration after airflow, fueling, exhaust, or forced-induction changes.</li>
+            <li>Improve drivability, throttle response, idle quality, and consistency.</li>
+            <li>Optimize a combination for a specific fuel, hardware setup, or performance goal.</li>
+            <li>Adjust transmission behavior where the controller supports it.</li>
+            <li>Use real data to determine whether a problem is calibration-related or mechanical.</li>
+          </ul>
+        </article>
+
+        <article class="about-card">
+          <h2>How the Process Should Work</h2>
+          <div class="accent-line"></div>
+          <div class="process-list">
+            <div class="process-step"><div class="step-number">1</div><div><h3>Inspect the Starting Point</h3><p>Know the vehicle, hardware, fuel, current tune, warning lights, and mechanical condition.</p></div></div>
+            <div class="process-step"><div class="step-number">2</div><div><h3>Collect Useful Data</h3><p>Scan the channels that actually explain what the engine or transmission is doing.</p></div></div>
+            <div class="process-step"><div class="step-number">3</div><div><h3>Change One Problem at a Time</h3><p>Develop the calibration methodically enough that cause and effect remain clear.</p></div></div>
+            <div class="process-step"><div class="step-number">4</div><div><h3>Validate the Result</h3><p>Re-log, compare, and verify behavior outside the exact condition that was being tuned.</p></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="about-cta">
+          <div>
+            <h2>Have a project in mind?</h2>
+            <p>Start with the vehicle, the current setup, and the problem you want solved.</p>
+          </div>
+          <a class="btn btn-primary" href="appointments.html">Request an Appointment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-identity">
+          <img
+            class="footer-logo"
+            data-theme-logo
+            data-dark-src="assets/jerry-rigs-logo-dark.png"
+            data-light-src="assets/jerry-rigs-logo-light.png"
+            src="assets/jerry-rigs-logo-dark.png"
+            alt="Jerry-Rigs logo">
+          <div>
+            <div class="footer-brand">Jerry-Rigs</div>
+            <div class="footer-tagline">Quality Work • Clear Data • Honest Service</div>
+          </div>
+        </div>
+
+        <div class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+        </div>
+
+        <div class="footer-theme">
+          <div class="theme-control-title">Appearance</div>
+          <label class="theme-switch">
+            <input type="checkbox" data-theme-toggle aria-label="Switch to light mode">
+            <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+            <span class="theme-mode" data-theme-label>Dark mode</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Jerry-Rigs. All rights reserved.</span>
+        <span>Automotive Tuning • Projects • Engineering</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

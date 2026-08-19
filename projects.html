@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1215" data-theme-color>
+  <script>
+    (() => {
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem('jerry-rigs-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
+  <meta name="description" content="Jerry-Rigs automotive project cars, tuning work, modifications, and development.">
+  <title>Projects | Jerry-Rigs</title>
+  <link rel="icon" href="assets/jerry-rigs-logo-dark.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="projects.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="site-shell">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img
+          data-theme-logo
+          data-dark-src="assets/jerry-rigs-logo-dark.png"
+          data-light-src="assets/jerry-rigs-logo-light.png"
+          src="assets/jerry-rigs-logo-dark.png"
+          alt="Jerry-Rigs logo">
+        <div class="brand-copy"><div class="brand-name">Jerry-Rigs</div><div class="brand-tagline">Automotive Tuning • Projects • Engineering</div></div>
+      </a>
+      <button class="menu-btn" data-menu-button aria-expanded="false" aria-label="Open navigation">Menu</button>
+      <nav class="nav-links" data-nav-links>
+        <a data-nav-link href="index.html">Home</a>
+        <a data-nav-link href="shop.html">Shop</a>
+        <a data-nav-link href="projects.html">Projects</a>
+        <a data-nav-link href="about.html">About</a>
+        <a data-nav-link class="nav-cta" href="appointments.html">Appointments</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <div class="eyebrow">Project Archive</div>
+        <h1>Jerry-Rigs Projects</h1>
+        <p>Project cars, tuning development, diagnostics, modifications, and the lessons learned while making each setup work better.</p>
+        <div class="accent-line"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Current & Future Builds</h2>
+          <div class="accent-line"></div>
+          <p>These project cards are designed to grow into full build pages with photos, CAD work, scan logs, dyno graphs, parts lists, and before-and-after results.</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card">
+            <div class="project-visual"><img data-theme-logo data-dark-src="assets/jerry-rigs-logo-dark.png" data-light-src="assets/jerry-rigs-logo-light.png" src="assets/jerry-rigs-logo-dark.png" alt="Jerry-Rigs project graphic"></div>
+            <div class="project-body">
+              <div class="project-type">Development Car</div>
+              <h2>2008 Chevrolet Malibu LS</h2>
+              <p>A long-term LE5 2.4L development platform used for learning calibration, improving drivability, testing intake and exhaust changes, and planning a much more serious future version of the car.</p>
+              <p>Work includes HP Tuners scanning and calibration changes, MAF calibration development, fuel-trim analysis, deceleration behavior testing, exhaust development, and ongoing drivetrain planning.</p>
+              <div class="tag-list"><span class="tag">HP Tuners</span><span class="tag">LE5 2.4L</span><span class="tag">MAF Calibration</span><span class="tag">Fuel Trims</span><span class="tag">Exhaust Development</span><span class="tag">Future Forced Induction</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual"><img data-theme-logo data-dark-src="assets/jerry-rigs-logo-dark.png" data-light-src="assets/jerry-rigs-logo-light.png" src="assets/jerry-rigs-logo-dark.png" alt="Future project placeholder"></div>
+            <div class="project-body">
+              <div class="project-type">Next Project</div>
+              <h2>Add the Next Build</h2>
+              <p>This space is ready for another vehicle. A future project page can include progress photos, CAD screenshots, fabricated parts, calibration logs, failures, fixes, and a complete build timeline.</p>
+              <div class="tag-list"><span class="tag">Vehicle</span><span class="tag">Goal</span><span class="tag">Calibration</span><span class="tag">Fabrication</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual"><img data-theme-logo data-dark-src="assets/jerry-rigs-logo-dark.png" data-light-src="assets/jerry-rigs-logo-light.png" src="assets/jerry-rigs-logo-dark.png" alt="Tuning case study placeholder"></div>
+            <div class="project-body">
+              <div class="project-type">Tuning Case Study</div>
+              <h2>Document the Calibration Process</h2>
+              <p>A useful tuning portfolio should show the starting condition, the issue being solved, the data used, the calibration areas changed, the final result, and any mechanical limits found during testing.</p>
+              <div class="tag-list"><span class="tag">Baseline</span><span class="tag">Data Logs</span><span class="tag">Calibration Changes</span><span class="tag">Validation</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-identity">
+          <img
+            class="footer-logo"
+            data-theme-logo
+            data-dark-src="assets/jerry-rigs-logo-dark.png"
+            data-light-src="assets/jerry-rigs-logo-light.png"
+            src="assets/jerry-rigs-logo-dark.png"
+            alt="Jerry-Rigs logo">
+          <div>
+            <div class="footer-brand">Jerry-Rigs</div>
+            <div class="footer-tagline">Quality Work • Clear Data • Honest Service</div>
+          </div>
+        </div>
+
+        <div class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+        </div>
+
+        <div class="footer-theme">
+          <div class="theme-control-title">Appearance</div>
+          <label class="theme-switch">
+            <input type="checkbox" data-theme-toggle aria-label="Switch to light mode">
+            <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+            <span class="theme-mode" data-theme-label>Dark mode</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Jerry-Rigs. All rights reserved.</span>
+        <span>Automotive Tuning • Projects • Engineering</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

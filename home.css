@@ -1,0 +1,129 @@
+.home-hero {
+  padding: 68px 0 52px;
+  background:
+    linear-gradient(120deg, var(--brand-soft), transparent 36%),
+    var(--shell-bg);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.home-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.home-hero h1 {
+  max-width: 780px;
+  font-size: clamp(46px, 6.5vw, 76px);
+}
+
+.home-hero h1 span {
+  color: var(--brand);
+}
+
+.home-hero p {
+  max-width: 730px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 26px;
+}
+
+.hero-logo-card {
+  min-height: 330px;
+  display: grid;
+  place-items: center;
+  padding: 38px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 70% 15%, var(--brand-soft), transparent 44%),
+    var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-logo-card::before {
+  content: "";
+  position: absolute;
+}
+
+.hero-logo-card img {
+  width: min(76%, 245px);
+  filter: drop-shadow(0 22px 26px rgba(0, 0, 0, 0.18));
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home-cards .card {
+  position: relative;
+}
+
+.card-number {
+  width: 44px;
+  height: 4px;
+  margin-bottom: 19px;
+  background: var(--brand);
+  border-radius: 99px;
+}
+
+.feature-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 28px;
+  background:
+    linear-gradient(110deg, var(--brand-soft), transparent 46%),
+    var(--surface);
+  border-radius: 9px;
+}
+
+.feature-band h2 {
+  margin: 0;
+  color: var(--heading);
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+.feature-band p {
+  max-width: 760px;
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .home-hero {
+    padding-top: 48px;
+  }
+
+  .home-hero-grid,
+  .home-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-logo-card {
+    min-height: 245px;
+  }
+
+  .hero-logo-card img {
+    width: 180px;
+  }
+
+  .feature-band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
